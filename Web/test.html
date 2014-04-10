@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+
+<script src="js/jquery-1.7.1.min.js"></script>
+<script>
+	$(function() {
+		var ajax='Ajax';
+		var score=22;
+		$.ajax({
+            url: '/rank.asmx/uploadScore',
+            data: '{name:"' + ajax + '", score: ' + score + '}',
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json"
+        });
+	});
+</script>
+</body>
+</html>
